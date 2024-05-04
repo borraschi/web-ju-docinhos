@@ -1,0 +1,128 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.barra-pesquisa{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.menu li {  
+    display: flex; /* Ativa o flex container nos itens do menu */
+    align-items: center; /* Alinha verticalmente os itens */
+    flex-wrap: wrap;
+}
+
+.menu li a {
+    display: flex; /* Ativa o flex container nos links */
+    align-items: center; /* Alinha verticalmente os itens */
+    flex-direction:column;
+    flex-wrap: wrap;
+}
+
+.sub_menu {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.sub_menu_nomes {
+    display: flex;
+    justify-content: space-around; /* Espaço igual entre os itens */
+}
+
+.sub_menu_nomes li a {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    flex-direction: column;
+}
+
+.apresentacao {
+    display:flex; /* Torna o contêiner flexível */
+    justify-content: center ;
+}
+
+.apresentacao__conteudo__titulo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start ; /* Alinha os itens ao final do eixo principal (no caso, à direita) */
+}
+
+.container_produto {  
+    display: flex; /* Define como um flex container */
+    flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: flex-start; /* Alinha os itens no início verticalmente */
+}
+
+.produto_destaque {
+    align-items: flex-start;
+}
+
+.produto-imagem-destaque {
+    display: flex;
+    justify-content: flex-start;
+}
+.frase-destaque {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
+     justify-content: flex-end; /* Alinha os itens ao final do eixo principal (à direita) */
+}
+
+  
+
+@media screen and (min-width: 768px) {
+    .botão__destaque {
+      flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
+      flex-direction: row; /* Altera para layout em linha em telas maiores */
+      align-items: flex-start; /* Alinha os itens ao topo */
+    }
+}
+    
+.container_lista_produtos { 
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao-produto {
+    display: flex;
+    flex-wrap: wrap;
+}
+.produtodoce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto-imagem {
+    display: flex;
+}
+
+.botao {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
