@@ -4,6 +4,7 @@ body,ul,li, p {
     list-style: none;
     font-size: 1.2rem;
     font-family: Arial;
+    box-sizing: border-box;
 }
 
 a {
@@ -11,192 +12,158 @@ a {
 }
 header {
     background-color: #ca6391fe;
-    color: #370e0e00;
+    padding: 5px;
+    width: 100%;
+}
+
+.logotipo {
+    width: 60px; 
+    height: auto; 
+    border: none 
+    
+}
+
+.barra-pesquisa input[type=text]{
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    height: auto;
+
+}
+
+.barra-pesquisa button {
+    padding: 10px 20px;
+    background-color: #c03e74;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: auto;
+}
+
+.menu {
+    list-style-type: none; 
     padding: 10px;
-   }
-    
-    .logotipo {
-        width: 60px; /* Largura desejada */
-        height: auto; /* Altura automática para manter a proporção */
-        border: none /* Exemplo de borda para visualização */
-       
-    }
-
-    .barra-pesquisa input[type=text]{
-        padding: 10px 20px;
-        margin-right: 10px;
-        border: none;
-        border-radius: 5px;
-        height: auto;
-
-    }
-
-    .barra-pesquisa button {
-        padding: 10px 20px;
-        background-color: #c03e74;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        height: auto;
-    }
-
-
-    @media only screen and (max-width: 700px) {
-        .barra-pesquisa {
-          display: none; /* Esconde a barra de pesquisa */
-        }
-        .barra-pesquisa input[type=text]{
-            padding: 10px 5px;
-            margin-right: 5px;
-            border: none;
-            border-radius: 5px;
-            height: auto;
-        }
-        .menu {
-            list-style-type: none; /* Remove os marcadores de lista */
-            padding: 4px;
-            margin: 4px;
-            display: flex; /* Ativa o flex container */
-        }
-        .menu li {
-            margin-right: 5px; /* Espaçamento entre os itens do menu */
-           
-        }
-        .menu li a {
-            text-decoration: none; /* Remove sublinhado dos links */
-            color: #fff; /* Cor do texto do link */
-            font-size: 16px; /* Tamanho da fonte */
-            font-weight: bold; /* Negrito */ 
-        }
-        .menu li a .material-symbols-outlined {
-            font-family: "Material Icons"; /* Define a fonte para os ícones */
-            font-size: 25px; /* Tamanho dos ícones */
-            margin-right: 10px; /* Espaçamento entre o ícone e o texto */
-        }
-        .produto-imagem-destaque {
-    
-            max-width: 325px;
-            max-height: 127px;
-            border-radius: 5px;
-            
-          }
-    }
-    .menu {
-        list-style-type: none; /* Remove os marcadores de lista */
-        padding: 16px;
-        margin: 8px;
-        display: flex; /* Ativa o flex container */
-    }
-    
-    .menu li {
-        margin-right: 20px; /* Espaçamento entre os itens do menu */
-       
-    }
-    
-    .menu li:last-child {
-        margin-right: 0; /* Remove a margem do último item */
-    }
-    
-    .menu li a {
-        text-decoration: none; /* Remove sublinhado dos links */
-        color: #fff; /* Cor do texto do link */
-        font-size: 16px; /* Tamanho da fonte */
-        font-weight: bold; /* Negrito */ 
-    }
-    
-    .menu li a:hover {
-        color: #666; /* Cor do texto do link quando passa o mouse */
-    }
-    
-    .menu li a .material-symbols-outlined {
-        font-family: "Material Icons"; /* Define a fonte para os ícones */
-        font-size: 25px; /* Tamanho dos ícones */
-        margin-right: 10px; /* Espaçamento entre o ícone e o texto */
-    }
-
-    .sub_menu {
-    
-        background-color: #f0f0f0; /* Cor de fundo do submenu */
-        padding: 20px 10px; /* Espaçamento interno */
-    }
-
-    .sub_menu_nomes {
-        list-style: none; /* Remove os marcadores de lista */
-        margin: 0; /* Remove as margens padrão da lista */
-        padding: 0; /* Remove o preenchimento padrão da lista */
-    }
-
-    .sub_menu_nomes li {
-        margin: 0 10px; /* Adiciona margens aos lados dos itens */
-    }
-
-    .sub_menu_nomes li a {
-        text-decoration: none; /* Remove o sublinhado dos links */
-        color: #333; /* Cor do texto */
-        display: flex;
-        align-items: center; /* Alinha os itens verticalmente */
-        margin: 15px;
-    }
-
-    /* Estilo para os ícones */
-    .sub_menu_nomes li a span {
-        margin-right: 5px; /* Espaçamento entre o ícone e o texto */
-    }
-
-    .apresentacao {
-        margin: 30px;
-    }
-    
-    .apresentacao__conteudo__titulo {
-        max-width: 900px;
-    }
-    
-
-.container_produto { 
-    height: 300px; /* Ajuste conforme necessário */
-   padding:20px;
-    background-color: #f2f2f2; /* Cor de fundo da caixa */
-}
-.produto_destaque {
-    width: 600px; /* Largura do produto (pode ajustar conforme necessário) */
-    padding: 20px; /* Espaçamento interno do produto */
-    text-align: center; /* Centraliza o conteúdo dentro do produto */
+    margin: 8px;
+    display: flex; 
 }
 
-.frase-destaque {
-    margin-left: 400px; /* Espaçamento à esquerda da frase */
-    margin-top: -200px; /* Remove a margem superior padrão */
-    font-size: 18px; /* Tamanho da fonte da frase */
-  }
+.menu li {
+    margin-right: 20; 
+    
+}
 
-  .botao__destaque {
-    margin-left: 400px;
+.menu li:last-child {
+    margin-right: 0; 
+}
+
+.menu li a {
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold; 
+}
+
+.menu li a:hover {
+    color: #666;
+}
+
+.menu li a .material-symbols-outlined {
+    font-family: "Material Icons"; 
+    font-size: 25px;
+    margin-right: 10px; 
+}
+
+.sub-barra-pesquisa {
+    display: none;
+}
+
+.sub_menu {
+    padding: 8px;
+  
+
+}
+
+.sub_menu_nomes {
+    list-style: none; 
+    margin: 0; 
+    padding: 0;  
+}
+
+.sub_menu_nomes li {
+    margin: 0 10px; 
+}
+
+.sub_menu_nomes li a {
+    text-decoration: none; 
+    color: #333; 
+    display: flex;
+    align-items: center; 
+    margin: 15px;
+}
+
+.sub_menu_nomes li a span {
+    margin-right: 5px; 
+}
+
+.apresentacao {
+    margin: 30px;
+}
+
+.apresentacao__conteudo__titulo {
+    max-width: 900px;
+}
+
+.container_produto_destaque {
+    width: auto;
+    padding: auto; 
+    box-sizing: border-box;
+    border: auto;
     margin-top: 20px;
+
+}
+
+.produto_destaque {
+    margin: 10px 20px;
+    padding: auto;
+    border: auto;
+}
+
+.produto_imagem_destaque {
+    max-width: 600px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto 10px;
+    margin-bottom: 10px;
+    padding: auto;
+    border: auto;
+    
+}
+
+.frase_destaque {
+     margin-top: 10px;
+}
+
+.botao_destaque {
+    /* width: -350px;  */
+    margin: 10px;
     padding: 10px 20px;
     background-color: #c03e74;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
-  }
- 
-  .produto-imagem-destaque {
-    
-    max-width: 650px;
-    max-height: 255px;
-    border-radius: 5px;
-    
-  }
-  
+    font-size: 16px;
+}
 
 .container_lista_produtos { 
     margin-top: 50px;
 }
 
 .produtodoce {
-    margin: 0 20px;
+    margin: 10px 20px;
 }
 
 .produto-imagem {
@@ -208,12 +175,11 @@ header {
 }
 .descricao-produto {
 
-    margin-top: 10px; /* Adiciona espaço entre a imagem e a descrição do produto */
+    margin-top: 10px; 
 }
 
 .preco-produto {
-    font-weight: bold; /* Adiciona negrito ao preço */
-    width: -350px; 
+    font-weight: bold;
     margin: 10px;
 }
 .botao__comprar {
@@ -242,25 +208,118 @@ header {
     background-color: #45a049;
 }
 
-@media screen and (max-width: 768px) {
-    .container_lista_produtos {
-        display: block;
-    }
-}
 footer {
-    padding: 10px 36px;
+    padding: 30px;
     background-color: #ca6391fe;
     color: white;
     text-align: center;
     margin-top:90px;
-    padding: 30px;
+    
   }
 
   footer p {
-    margin: 0; /* Remove a margem padrão dos parágrafos */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
+    margin: 0; 
+    padding: 0; 
+    font-size: 16px; 
 }
 
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        background-color: #ca6391fe;
+        color: #370e0e00;
+    }
+   
+    .logotipo {
+        display: none;
+    }
 
+    .barra-pesquisa input[type=text]{
+        padding: 10px 60px;
+        margin: 0;
+        margin-top: 20px;
+    }
+    
+    .barra-pesquisa button { 
+    display: none;
 
+    }
+
+    .menu {
+        width: 100%;
+        float: none;
+        /* padding: 8px;
+        margin: 4px; */
+    }
+
+    .menu li {
+        
+        margin-right: 10px;
+    }
+
+    .menu li a {
+        
+        font-size: 14px;
+    }
+
+    .menu li a .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+   .sub_menu {
+    width: 100%;
+    margin-top: auto;
+  
+   }
+
+    .sub_menu_nomes li a {
+        display: flex;
+        margin: 10px;
+    }
+
+    .apresentacao {
+        margin: 20px;
+    }
+
+    .produto_destaque,.produtodoce {
+        width: 100%;
+        float: none;
+        /* margin: 10px; */
+    }
+
+    .container_produto_destaque {
+        width: 100%;
+        float: none;
+        /* padding: 5px;  */
+    }
+    
+    .produto_imagem_destaque {
+        width: 100%;
+        float: none;
+    
+    }
+
+    .container_lista_produtos {
+        width: 100%;
+        float: none;
+        /* margin-top: 20px; */
+    }
+
+    .preco-produto {
+        margin: 5px;
+    }
+
+    .botao_destaque, .botao__comprar, .botao__adicionar {
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+
+    footer {
+        background-color: #ca6391fe;
+        padding: 20px; 
+        width: 100%;
+    }
+    footer div {
+        width: 100%;
+    }
+}

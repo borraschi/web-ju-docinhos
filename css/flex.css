@@ -1,20 +1,24 @@
 header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; 
 }
 
-.container {
+.container_produto_destaque {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.barra-pesquisa{
+.barra-pesquisa {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 
 .menu {
     display: flex;
@@ -23,80 +27,111 @@ header {
 }
 
 .menu li {  
-    display: flex; /* Ativa o flex container nos itens do menu */
-    align-items: center; /* Alinha verticalmente os itens */
+    display: flex; 
+    align-items: center; 
     flex-wrap: wrap;
 }
 
 .menu li a {
-    display: flex; /* Ativa o flex container nos links */
-    align-items: center; /* Alinha verticalmente os itens */
+    display: flex; 
+    align-items: center; 
     flex-direction:column;
     flex-wrap: wrap;
 }
 
 .sub_menu {
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-around; 
 }
 
 .sub_menu_nomes {
     display: flex;
-    justify-content: space-around; /* Espaço igual entre os itens */
+    justify-content: space-around; 
 }
 
 .sub_menu_nomes li a {
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
+    align-items: center;
     flex-direction: column;
 }
 
 .apresentacao {
-    display:flex; /* Torna o contêiner flexível */
+    display:flex; 
     justify-content: center ;
 }
 
 .apresentacao__conteudo__titulo {
-    flex: 1;
+    justify-self: start;
+    /* flex: 1; */
     display: flex;
-    justify-content: flex-start ; /* Alinha os itens ao final do eixo principal (no caso, à direita) */
+    justify-content: flex-start ;
 }
 
 .container_produto {  
-    display: flex; /* Define como um flex container */
-    flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
-    gap: 20px; /* Espaçamento entre os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: flex-start; /* Alinha os itens no início verticalmente */
-}
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center; 
+    align-items: flex-start; 
+} 
 
 .produto_destaque {
-    align-items: flex-start;
+display: flex;   
+flex-direction: column;
+align-items: center;
+text-align: center; 
 }
 
 .produto-imagem-destaque {
     display: flex;
     justify-content: flex-start;
+    
 }
 .frase-destaque {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
-     justify-content: flex-end; /* Alinha os itens ao final do eixo principal (à direita) */
+    flex-wrap: wrap; 
+    justify-content: flex-end; 
+} 
+
+ .container_produto_destaque{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex; 
+     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-  
-
-@media screen and (min-width: 768px) {
-    .botão__destaque {
-      flex-wrap: wrap; /* Permite que os itens se ajustem à largura da tela */
-      flex-direction: row; /* Altera para layout em linha em telas maiores */
-      align-items: flex-start; /* Alinha os itens ao topo */
-    }
-}
-    
-.container_lista_produtos { 
-    gap: 20px;
+.frase_destaque{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.produto_destaque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.produto_imagem_destaque{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botao_destaque {
+    display: flex;
+    justify-self: center;
+    /* justify-content: center; */
+   
+}
+
+.container_lista_produtos { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    display: flex; 
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -119,10 +154,110 @@ header {
 .botao {
     display: flex;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: space-between; 
+    justify-content: center;
 }
 
 footer {
     display: flex;
     justify-content: space-around;
 }
+
+
+   @media screen and (max-width: 768px) {
+
+    header {
+        display: block;
+        flex-direction: row;
+        align-items: flex-start; 
+    
+    }
+
+    .container_produto_destaque{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; 
+    }
+    .produto-imagem-destaque{
+        display: block;
+        align-items: center; 
+
+    }
+
+    .logotipo {
+        display:none;
+    }
+    
+   .barra-pesquisa {
+    display: flex;
+    align-items: center;
+   }
+    
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+    
+    .sub_menu {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .sub_menu_nomes {
+        display: flex;
+        flex-wrap: wrap;  
+        align-items: center;
+    }
+
+    .frase_destaque {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .produto_destaque{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .produto_imagem_destaque{
+        display: flex;
+    }
+    
+    .botao_destaque {
+        display: flex;
+        justify-content: center;
+       
+    }
+    
+    .container_produto {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+     .produto_destaque {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .botão__destaque {
+      flex-wrap: wrap; 
+      flex-direction: row;
+      align-items: flex-start; 
+   
+ }
+ footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+ }
+} 
+
+
+   
